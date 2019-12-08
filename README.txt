@@ -1,2 +1,1 @@
-Перед первой компиляцией приложения прописать команду "Update-Database" в консоль диспетчера пакетов NuGet.
-Первая компиляция может занять некоторое время по причине докачки пакетов.
+Untill start write to the package manager console "add-migration init"

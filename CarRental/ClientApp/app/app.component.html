@@ -1,0 +1,250 @@
+﻿
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container-fluid">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="#">Прокат автомобилей</a>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+			<button class="btn btn-outline-primary main-link mr-auto" (click)="showUModal()">Заказать автомобиль</button>
+			<ul class="navbar-nav">
+
+				<li class="nav-item">
+					<a href="#" class="nav-link" (click)="showUsers()">Список пользователей</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" (click)="showCars()">Список автомобилей</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" (click)="showOrder()">Список заказов</a>
+				</li>
+
+
+			</ul>
+		</div>
+	</div>
+</nav>
+<!--Модальное окно Заказа-->
+<div *ngIf="orderModalShow;" class="modal-content" style="position:absolute; top:5rem;">
+	<div class="modal-header">
+		<button class="close" data-dismiss="modal" area-hidden="true" (click)="closeModal()">X</button>
+
+	</div>
+	<div class="modal-body">
+		<table *ngIf="orderModalShow;" class="table table-striped">
+
+			<tr>
+				<td>
+					<label>Информация</label><input type="text" [(ngModel)]="order.title" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Дата начала проката</label><input type="date" [(ngModel)]="order.startRent" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Дата окончания проката</label><input type="date" [(ngModel)]="order.endRent" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+
+				<td>
+					<select [(ngModel)]="order.userId">
+						<option *ngFor="let p of users" value="{{p?.id}}">{{p?.surname}} {{p?.name}}</option>
+					</select>
+
+				</td>
+			</tr>
+			<tr>
+
+				<td>
+					<select [(ngModel)]="order.carId">
+						<option *ngFor="let p of cars" value="{{p?.id}}">{{p?.mark}} {{p?.model}}</option>
+					</select>
+
+				</td>
+
+			</tr>
+			<tr>
+				<td>
+					<label>Коментарий к заказу</label>	<input type="text" [(ngModel)]="order.discription" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="Продолжить" (click)="saveOrder()" class="btn btn-sm btn-success"style="font-size:1.7rem;" />
+					<input type="button" value="Отмена" (click)="closeModal()" class="btn btn-sm btn-warning"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+
+		</table>
+	</div>
+</div>
+<!--Модальное окно Юзера-->
+<div *ngIf="userModalshow;" class="modal-content">
+	<div class="modal-header">
+		<button class="close" data-dismiss="modal" area-hidden="true" (click)="closeModal()">X</button>
+
+	</div>
+	<div class="modal-body">
+		<table *ngIf="userModalshow;" class="table table-striped">
+
+			<tr>
+				<td>
+					<label>Фамилия</label><input type="text" [(ngModel)]="user.surname" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Имя</label><input type="text" [(ngModel)]="user.name" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Дата рождения</label><input type="date" [(ngModel)]="user.birthdate" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+
+				<td>
+					<label>Номер водительского удостоверения</label>	<input type="text" [(ngModel)]="user.numberBY" class="form-control"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="Продолжить" (click)="saveUser()" class="btn btn-sm btn-success"style="font-size:1.7rem;" />
+					<input type="button" value="Отмена" (click)="closeModal()" class="btn btn-sm btn-warning"style="font-size:1.7rem;" />
+				</td>
+			</tr>
+
+		</table>
+	</div>
+</div>
+<header>
+
+	<div class="container">
+		<div class="row justify-content-center">
+<!--Таблица автомобилей-->
+			<table *ngIf="carshow;" class="table table-light table-hover">
+				<thead class="thead-dark">
+					<tr>
+						<td>Марка</td>
+						<td>Модель</td>
+						<td>Тип</td>
+						<td>Год выпуска</td>
+						<td>Регистрационный номер </td>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let p of cars">
+						<ng-template [ngIf]="car?.id != p.id" [ngIfElse]="edit">
+							<td>{{p?.mark}}</td>
+							<td>{{p?.model}}</td>
+							<td>{{p?.type}}</td>
+							<td>{{p?.released}}</td>
+							<td>{{p?.registryNumber}}</td>
+
+						</ng-template>
+					</tr>
+				</tbody>
+			</table>
+<!--Таблица пользователей-->
+			<table *ngIf="usershow;" class="table table-light table-hover">
+				<thead class="thead-dark">
+					<tr>
+						<td>Фамилия</td>
+						<td>Имя</td>
+						<td>Дата рождения</td>
+						<td>Номер вод.удостоверения</td>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let a of users">
+						<ng-template [ngIf]="user?.id != a.id" [ngIfElse]="edit">
+
+							<td>{{a?.surname}}</td>
+							<td>{{a?.name}}</td>
+							<td>{{a?.birthdate}}</td>
+							<td>{{a?.numberBY}}</td>
+
+						</ng-template>
+					</tr>
+				</tbody>
+			</table>
+<!--Таблица заказов-->
+			<table *ngIf="ordershow;" class="table table-light table-hover">
+				<thead class="thead-dark">
+					<tr>
+						<td>Информация</td>
+						<td>Дата начала проката</td>
+						<td>Дата окончания проката</td>
+						<td>Пользователь</td>
+						<td>Машина</td>
+						<td>Коментарии</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let a of orders">
+						<ng-template [ngIf]="order?.id != a.id" [ngIfElse]="edit">
+
+							<td>{{a?.title}}</td>
+							<td>{{a?.startRent}}</td>
+							<td>{{a?.endRent}}</td>
+							<td>{{a?.user.name}}</td>
+							<td>{{a?.car.mark}}</td>
+							<td>{{a?.discription}}</td>
+							<td>
+								<button class="btn btn-sm btn-primary" (click)="editOrder(a)" style="font-size:1.7rem;">Изменить</button>
+								<button class="btn btn-sm btn-danger" (click)="deleteOrder(a)" style="font-size:1.7rem;">Удалить</button>
+							</td>
+						</ng-template>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</header>
+<footer>
+	<div class="container">
+		<div class="row justify-content-center">
+			<h2>&#xa9;2019 Denisenko N.S, All rights reserved</h2>
+			<div class="w-100"></div>
+			<a href="https://vk.com/id244914126">
+				<i class="fa fa-vk" aria-hidden="true"></i>
+			</a>
+		</div>
+	</div>
+</footer>
+<!--Шаблон для редактирования заказа-->
+<ng-template #edit>
+	<td>
+		<input type="text" [(ngModel)]="order.title" class="form-control" />
+	</td>
+	<td>
+		<input type="text" [(ngModel)]="order.startRent" class="form-control" />
+	</td>
+	<td>
+		<input type="text" [(ngModel)]="order.endRent" class="form-control" />
+	</td>
+	<td>
+		<input type="text" readonly [(ngModel)]="order.user.name" class="form-control" />
+	</td>
+	<td>
+		<input type="text" readonly [(ngModel)]="order.car.mark" class="form-control" />
+	</td>
+	<td>
+		<input type="text" [(ngModel)]="order.discription" class="form-control" />
+	</td>
+	<td>
+		<input type="button" value="Сохранить" (click)="saveOrder()" class="btn btn-sm btn-success" />
+		<input type="button" value="Отмена" (click)="cancelOrder()" class="btn btn-sm btn-warning" />
+	</td>
+</ng-template>

@@ -1,0 +1,32 @@
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.deps.json
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.runtimeconfig.json
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.runtimeconfig.dev.json
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.dll
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.pdb
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.RazorAssemblyInfo.cache
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.RazorAssemblyInfo.cs
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.AssemblyInfoInputs.cache
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.AssemblyInfo.cs
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.RazorTargetAssemblyInfo.cache
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.dll
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.pdb
+C:\Users\Никита\Desktop\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.csprojAssemblyReference.cache
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.deps.json
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.runtimeconfig.json
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.runtimeconfig.dev.json
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.dll
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\bin\Debug\netcoreapp2.2\CarRental.pdb
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.csprojAssemblyReference.cache
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.csproj.CoreCompileInputs.cache
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.RazorAssemblyInfo.cache
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.RazorAssemblyInfo.cs
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.AssemblyInfoInputs.cache
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.AssemblyInfo.cs
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.RazorTargetAssemblyInfo.cache
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.dll
+C:\Users\Никита\Desktop\Новая папка (2)\CarRental\CarRental\obj\Debug\netcoreapp2.2\CarRental.pdb
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\package.json
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Никита\Desktop\CarRental\CarRental\bin\Debug\netcoreapp2.2\tsconfig.json

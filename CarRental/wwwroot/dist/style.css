@@ -1,0 +1,72 @@
+*,
+body{
+    top: 0;
+    left: 0;
+	font-size:1.7rem;
+}
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Navigation*/
+nav{
+   position: fixed !important;
+   width: 100%;
+    
+}
+nav .navbar-brand{
+    font-size: 1.7rem;
+}
+nav .main-link{
+    font-size: 1.5rem;
+    margin-left:30% ;
+}
+nav .main-link{
+    border: 2px solid #000;
+    border-radius: 0;
+    color: #000000;
+    padding: 10px 20px;
+}
+.main-link:hover{
+    background-color: #000;
+    transition: .35s all;
+}
+nav ul li a{
+    font-size: 1.1rem;
+}
+nav ul li:hover{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transition: 1s all;
+}
+a{
+	font-size:1.7rem !important;
+}
+/*Header*/
+header{
+    background:url("header.jpg") no-repeat center top/cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+	font-size:1.7rem;
+}
+header table{
+    margin-top: 10%;
+    border: solid #000;
+}
+
+footer{
+    padding: 5rem 0;
+    
+}
+
+footer h2 {
+	font-size: 1rem;
+}
+.modal-content {
+	left:25%;
+	width:50%;
+	position: fixed;
+	top: 20%;
+	
+}
